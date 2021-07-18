@@ -1,0 +1,30 @@
+{
+    "name": "rr/api-mailer",
+    "description": "Send API emails through mail service providers",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ramy Rabie",
+            "email": "eng.ramyrabie@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "RR\\ApiMailer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^7.3|^8.0",
+        "mailjet/mailjet-apiv3-php": "^1.5",
+        "sendgrid/sendgrid": "~7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3.3"
+    }
+}
