@@ -1,6 +1,6 @@
 {
     "name": "rr/api-mailer",
-    "description": "Send API emails through mail service providers",
+    "description": "API Service Mailer, which allows PHP applications to send emails through API.",
     "type": "library",
     "license": "MIT",
     "authors": [
