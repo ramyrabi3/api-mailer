@@ -1,0 +1,29 @@
+name: PHPUnit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+
+      - name: Install dependencies
+        run: composer install --prefer-dist
+
+
+      - name: Run tests
+        uses: php-actions/phpunit@v3
+        with:
+          configuration: ./phpunit.xml
+
